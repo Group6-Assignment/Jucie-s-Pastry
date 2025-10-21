@@ -1,0 +1,472 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Jucie's Pastry</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css?family=Poppins:100,100italic,200,200italic,300,300italic,regular,italic,500,500italic,600,600italic,700,700italic,800,800italic,900,900italic" />
+  <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+  <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+  <style>
+    html {
+      scroll-behavior: smooth;
+    }
+
+    body {
+      font-family: 'Poppins', sans-serif;
+    }
+  </style>
+</head>
+
+<body class="bg-pink-200 text-white overflow-x-hidden ">
+
+  <!-- HEADER -->
+  <header class="w-full h-[88px] px-6 md:px-20 py-5 flex justify-between items-center bg-pink-400 top-0 z-[1000] fixed">
+    <div class="flex items-center gap-3 font-bold text-[#F9FAFA] drop-shadow-[0_0_25px_#83c94980]">
+      <img src="image/xhs 2847979517 _ art drawing fanart hello kitty donut sanrio.jpg" alt="Logo"
+        class="w-12 h-12 rounded-full " />
+      <p class="font-bold">Jucie's Pastry </p>
+    </div>
+    <ul id="sidebar" class="hidden md:flex list-none gap-10 ">
+      <li><a href="#home" class="hover:text-pink-700  font-bold transition">Home</a></li>
+      <li><a href="#new" class="hover:text-pink-700 font-bold transition">New</a></li>
+      <li><a href="#shop" class="hover:text-pink-700 font-bold transition">Cake</a></li>
+      <li><a href="#care" class="hover:text-pink-700 font-bold transition">Drink</a></li>
+      <li><a href="#contact" class="hover:text-pink-900 font-bold transition">Contact</a></li>
+    </ul>
+    <div class="flex gap-5 text-2xl text-[#F9FAFA]">
+      <ion-icon name="person-outline"></ion-icon>
+      <ion-icon name="cart-outline"></ion-icon>
+      <ion-icon id="menu" class="md:hidden cursor-pointer" name="menu"></ion-icon>
+    </div>
+  </header>
+
+  <!-- SIDEBAR MOBILE -->
+  <div id="sidebar-mobile"
+    class="fixed top-0 right-[-100%] w-[70%] h-screen bg-black bg-opacity-40 transition-all duration-400 ease-in-out z-[1000] p-8 flex flex-col gap-6">
+    <div class="flex justify-between items-center mb-8">
+      <ion-icon id="close" name="close-outline" class="text-3xl cursor-pointer absolute right-5 top-3"></ion-icon>
+    </div>
+    <a href="#home" class="hover:text-pink-500 text-lg font-bold">Home</a>
+    <a href="#new" class="hover:text-pink-500 text-lg font-bold">New</a>
+    <a href="#shop" class="hover:text-pink-500 text-lg font-bold">Cake</a>
+    <a href="#care" class="hover:text-pink-500 text-lg font-bold">Drink</a>
+    <a href="#contact" class="hover:text-pink-500 text-lg font-bold">Contact</a>
+  </div>
+  <div id="overlay" class="fixed top-0 left-0 w-full h-screen bg-black bg-opacity-60 hidden z-[150]"></div>
+
+
+  <!-- HOME -->
+  <section id="home"
+    class="scroll-mt-[88px] flex flex-wrap justify-center items-center  px-2 relative top-14 md:px-20 py-18 min-h-screen md:flex justify-center md:gap-48">
+    <div class="hero-image">
+      <img src="image/1 copy.png" alt="Cake" class=" w-[300px] h-[300px] md:w-[400px] md:h-[400px] " />
+    </div>
+    <div class="max-w-[550px] text-center md:text-left">
+      <h1 class="text-[38px] text-white md:text-[48px] leading-tight font-extrabold mb-5">
+        SWEETS THAT MELT YOUR <span class="text-pink-400">HEART</span>
+      </h1>
+      <p class="text-gray-500 text-[15px] font-bold leading-relaxed mb-10">
+        Cute, Soft, Creamy, and unforgettable desserts made with love. <br> Our desserts are design to make your day
+        sweeter.
+      </p>
+      <div class="flex flex-row sm:flex-row justify-center md:justify-start items-center gap-6">
+        <a href="#shop"
+          class="bg-[#F9FAFA] text-[#0C0D13] font-bold px-7 py-3 rounded-full hover:bg-pink-300 transition-all duration-300 flex items-center gap-2">
+          <ion-icon class="bg-pink-400 rounded-full text-xl p-2" name="arrow-forward-outline"></ion-icon>
+          GO TO MENU
+        </a>
+        <a href="#care" class="text-white underline  hover:text-pink-500 font-semibold transition-all duration-300">
+          MORE DETAILS
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <!-- NEW Dessert -->
+  <section id="new"
+    class=" scroll-mt-[88px] text-white flex items-center justify-center p-6 md:pt-12 md:pb-16 min-h-screen">
+    <div class="max-w-6xl w-full grid grid-cols-1 lg:grid-cols-2 gap-10 items-center container ">
+
+      <div class="text-center lg:text-left ml-10 ">
+        <h1 class="text-3xl font-bold leading-tight md:text-5xl">New Desserts</h1>
+        <p class="my-3 font-bold text-xl text-pink-400 md:text-3xl">Coming Up!</p>
+        <p class="text-gray-400 font-bold mt-4 max-w-md mx-auto lg:mx-0 ">
+          We’ve got something deliciously new coming up! Fresh, sweet, and made with love <3. </p>
+      </div>
+      <div class="flex text-pink-400 flex-col items-center gap-14 relative">
+        <div
+          class="bg-[#ffefd9]  relative md:right-36 rounded-2xl w-[200px] h-[215px] text-center border-2 border-pink-400 -rotate-[5deg] overflow-visible mt-5 transition-transform duration-300 hover:-translate-y-2">
+          <img src="image/3.png" alt="Strawberry Cupcake"
+            class="absolute top-[-10px] left-1/2 transform -translate-x-1/2 w-[200px] h-auto" />
+          <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2">
+            <h2 class=" text-lg font-bold leading-tight">
+              Fluffy <br>Cupcake
+            </h2>
+          </div>
+        </div>
+        <div
+          class="bg-[#ffefd9] relative md:left-32 rounded-2xl w-[200px] h-[215px] text-center border-2 border-pink-400 rotate-[5deg] overflow-visible transition-transform duration-300 hover:-translate-y-2">
+          <img src="image/4.png" alt="Sulent"
+            class=" absolute top-[-40px] left-1/2 transform -translate-x-1/2  w-[250px] h-[250px] " />
+          <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2">
+            <h2 class=" text-lg font-bold leading-tight">
+              Strawberry <br> Macaron
+            </h2>
+          </div>
+        </div>
+        <div
+          class="bg-[#ffefd9] relative md:right-32 rounded-2xl w-[200px] h-[215px] text-center border-2 border-pink-400 -rotate-[5deg] overflow-visible transition-transform duration-300 hover:-translate-y-2">
+          <img src="image/2.png" alt="Rebutia Cactus"
+            class="absolute  left-1/2 transform -translate-x-1/2 w-[150px] h-auto" />
+          <div class="absolute bottom-3 left-1/2 transform -translate-x-1/2">
+            <h2 class=" text-lg font-bold leading-tight">
+              Strawberry <br> Cake
+            </h2>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- OUR DESSERT -->
+  <section id="shop" class="scroll-mt-[88px] text-black  flex justify-center items-center relative">
+    <div class="text-center ">
+      <h1 class="text-4xl text-white font-bold mb-8 pb-10 md:mb-10 mt-10">Our Desserts</h1>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-14 ">
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/Layercake.png" alt="Layercake" class=" mx-auto -mt-16" />
+          <h2 class="text-sm text-left mt-5">Strawberry<br>Layer-cake</h2>
+          <div class="flex items-center justify-between mt-2">
+            <p>$5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/Matcha Roll cake.png" alt="Matcha Roll cake" class=" mx-auto -mt-16 " />
+          <h2 class="text-sm text-left mt-5">Matcha <br>Cake-Roll</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$5.5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/6.png" alt="Butter Croissant" class=" mx-auto -mt-14 " />
+          <h2 class="text-sm text-left mt-5">Butter Croissant</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$3</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/Donut.png" alt="Donut" class=" mx-auto -mt-16 " />
+          <h2 class="text-sm text-left mt-5">Creamy <br>Donut</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$2.5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/Strawberry-Cake.png" alt="Strawberry-Cake" class=" mx-auto -mt-16 " />
+          <h2 class="text-sm text-left mt-5">Strawberry <br> Mini-Cake</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$6</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/Tiramisu.png" alt="Strawberry-Cake" class=" mx-auto -mt-16 " />
+          <h2 class="text-sm text-left mt-5">Choco <br>Tiramisu</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/MatchaCake.png" alt="MatchaCake" class=" mx-auto -mt-16 " />
+          <h2 class="text-sm text-left mt-5">Matcha <br>Cake</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$6</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 relative rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="image/Layercake-Matcha.png" alt="Layer-cake Matcha" class=" mx-auto -mt-16 md:-mt-20 " />
+          <h2 class="text-sm text-left mt-5">Matcha <br> Layer-cake</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$4</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 relative rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- DRINK -->
+  <section id="care" class="scroll-mt-[88px] flex justify-center items-center md:py-24 ">
+    <div class="text-center text-black">
+      <h1 class="text-4xl text-white font-bold mb-8 pb-10 mt-10 ">Our Drinks</h1>
+      <div class="grid grid-cols-2 sm:grid-cols-2 md:grid-cols-4 gap-14 ">
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Boba (2).png" alt="Boba" class="w-[200px] h-auto mx-auto -mt-16 md:w-[250px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Milk Tea</h2>
+          <div class="flex items-center justify-between mt-2">
+            <p>$2.5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 text-black rounded-full  p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/coffee.png" alt="Iced-Coffee" class=" mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Iced-Coffee</h2>
+          <div class="flex items-center justify-between mt-2">
+            <p>$2</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 text-black rounded-full text-xl p-2"
+              name="bag-outline" class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Cuppuchino Assino.png" alt="Hot Chocolate"
+            class=" mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Hot Chocolate</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$3</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 text-black  rounded-full text-xl p-2"
+              name="bag-outline" class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Matcha (2).png" alt="Matcha" class="mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Matcha Latte</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$2.5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 text-black  rounded-full text-xl p-2"
+              name="bag-outline" class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Strawberry.png" alt="Strawberry-Milk"
+            class=" mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Strawberry Milk</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$2.5</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 text-black  relative rounded-full text-xl p-2"
+              name="bag-outline" class="text-xl"></ion-icon>
+          </div>
+        </div>
+
+
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Sprite.png" alt="Lemonade" class=" mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Lemonade</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$2</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 text-black  relative rounded-full text-xl p-2"
+              name="bag-outline" class="text-xl"></ion-icon>
+          </div>
+        </div>
+        <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Peach-Tea.png" alt="Peach-Tea" class="mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Lychee Tea</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$2</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 relative rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+          <div
+          class="bg-[#ffefd9] border-2 border-pink-400 rounded-xl p-5 w-40 mx-auto hover:scale-105 transition-transform md:w-[240px] md:h-[283px]">
+          <img src="img/Strawberry Matcha.png" alt="Strawberry Matcha" class="mx-auto -mt-16 md:w-[210px] md:h-[221.9px]" />
+          <h2 class="text-sm text-left mt-5">Strawberry Matcha-Latte</h2>
+          <div class="flex items-center justify-between mt-2 text-base">
+            <p>$3</p>
+            <ion-icon class="bg-[#f7d992] border-2 border-pink-400 relative rounded-full text-xl p-2" name="bag-outline"
+              class="text-xl"></ion-icon>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact -->
+  <section id="contact">
+    <div class=" flex flex-col items-center text-center pt-20 relative z-10">
+
+      <!-- Title -->
+      <div class="text-center text-gray-50 text-2xl font-bold lg:mb-8">
+        <h1>Craving something sweet? <br> Contact us, <span class="text-pink-400">cutie!</span></h1>
+      </div>
+
+      <!-- Content -->
+      <div
+        class="md:flex md:flex-row-reverse md:items-center md:justify-center flex flex-col items-center justify-center md:gap-20 md:-mt-4 lg:-mt-6">
+
+        <div
+          class="w-[270px] h-[326px] md:w-[480px] md:h-[581px] md:mb-0 flex items-center justify-center md:justify-end md:pt-4 lg:pt-6">
+          <img src="image/image.png" alt="Chef" class="w-[300px] h-[300px] rounded-2xl object-contain">
+        </div>
+
+        <!-- Text -->
+        <div
+          class="flex flex-col items-center justify-center w-[280px] md:w-[360px] md:text-left md:space-y-6 md:mt-10 lg:mt-12 md:pl-4 lg:pl-8">
+          <!-- Write to us -->
+          <div>
+            <h1 class="font-semibold text-xl text-gray-50 mb-3">Write to us</h1>
+            <div class="flex gap-4 text-pink-400 text-[24px] mb-3 justify-center md:justify-start">
+              <ion-icon name="logo-whatsapp"></ion-icon>
+              <ion-icon name="chatbubble-ellipses"></ion-icon>
+              <ion-icon name="mail"></ion-icon>
+            </div>
+          </div>
+
+          <!-- Call us -->
+          <div class="flex flex-col items-center justify-center">
+            <h1 class="font-semibold text-gray-50 text-xl mb-3">Call us at the numbers</h1>
+            <p class="text-gray-500 text-center text-sm leading-relaxed">+855 86-84-76-76<br>+855 12-168-168 <br>+855
+              97-169-169</p>
+          </div>
+
+          <!-- Find us -->
+          <div class="flex flex-col items-center justify-center">
+            <h1 class="font-semibold text-gray-50 text-xl mb-3">Find us here</h1>
+            <p class="text-gray-500 text-center text-sm leading-relaxed"> Siem Reap - Cambodia <br>10 Makara Road</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- copyright -->
+    <div class=" flex flex-col justify-between">
+      <footer
+        class="w-full mx-6 py-10 px-6 md:py-[64px] md:px-[160px] flex flex-col justify-center space-y-10 md:flex-row md:items-start md:justify-between md:space-y-0">
+
+        <!-- Left (Logo & Text) -->
+        <div class="flex flex-col items-start">
+          <div class="flex items-center gap-3">
+            <img src="image/xhs 2847979517 _ art drawing fanart hello kitty donut sanrio.jpg" alt="Cactus logo"
+              class="w-10 h-10 rounded-full" />
+            <h1 class="text-2xl text-gray-50 font-semibold">Jucie's Pastry</h1>
+          </div>
+          <div class="mt-4 text-gray-500 leading-relaxed">
+            <p>Choose your favorite dessert and <br> drink from our Jucie's Pastry</p>
+          </div>
+        </div>
+
+        <!--(Company&Information) -->
+        <div class="flex flex-row md:flex-row md:space-y-0 md:space-x-[112px] mt-10 mb-10 w-full md:w-auto gap-14 ">
+          <!-- company -->
+          <div>
+            <h2 class="text-xl font-semibold text-gray-50 mb-6">COMPANY</h2>
+            <ul class="space-y-5 text-gray-500">
+              <li>About Us</li>
+              <li>Products</li>
+              <li>Features</li>
+            </ul>
+          </div>
+          <!-- information -->
+          <div>
+            <h2 class="text-xl text-gray-100 font-semibold mb-6">INFORMATION</h2>
+            <ul class="space-y-2 text-gray-500">
+              <li>Blogs & News</li>
+              <li>Contacts Us</li>
+              <li>FAQs</li>
+            </ul>
+          </div>
+        </div>
+        <!-- social -->
+        <div>
+          <h2 class="text-xl font-semibold text-gray-50 mb-10">SOCIAL MEDIA</h2>
+          <div class="flex items-center gap-4 text-gray-500">
+            <ion-icon class="text-2xl" name="logo-facebook"></ion-icon>
+            <ion-icon class="text-2xl" name="logo-instagram"></ion-icon>
+            <ion-icon class="text-2xl" name="logo-whatsapp"></ion-icon>
+          </div>
+        </div>
+      </footer>
+
+      <!-- copyright -->
+      <div class="flex justify-center items-center w-full text-[#ADAFB9] text-xs py-4 gap-2 ">
+        <ion-icon class="text-lg" name="reload-circle-outline"></ion-icon>
+        <p>Choose your favorite dessert from our Jucie's Pastry</p>
+      </div>
+  </section>
+
+
+
+  <script>
+    const menu = document.getElementById("menu");
+    const sidebarMobile = document.getElementById("sidebar-mobile");
+    const overlay = document.getElementById("overlay");
+    const closeBtn = document.getElementById("close");
+
+    const openSidebar = () => {
+      sidebarMobile.classList.add("right-0");
+      sidebarMobile.classList.remove("right-[-100%]");
+      overlay.classList.remove("hidden");
+    };
+
+    const closeSidebar = () => {
+      sidebarMobile.classList.remove("right-0");
+      sidebarMobile.classList.add("right-[-100%]");
+      overlay.classList.add("hidden");
+    };
+
+    menu.addEventListener("click", openSidebar);
+    closeBtn.addEventListener("click", closeSidebar);
+    overlay.addEventListener("click", closeSidebar);
+
+    const sidebarLinks = sidebarMobile.querySelectorAll("a");
+    sidebarLinks.forEach(link => {
+      link.addEventListener("click", closeSidebar);
+    });
+  </script>
+</body>
+
+</html>
